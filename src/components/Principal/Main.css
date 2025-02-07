@@ -1,0 +1,66 @@
+.principal__conteudo {
+    position: relative;
+}
+
+.principal__conteudo__imagem {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+}
+
+.principal__conteudo__imagem__logo {
+    position: absolute;
+    top: 40%;
+    left: 150px;
+    width: auto;
+    height: 120px;
+    z-index: 10;
+}
+
+.principal__conteudo__imagem__paragrafo {
+    position: absolute;
+    top: calc(40% + 150px);
+    left: 150px;
+    width: auto;
+    max-width: 30%;
+    color: var(--mubiBranco);
+    font-size: 0.9rem;
+    font-family: var(--fontePrincipal);
+    z-index: 10;
+}
+
+.principal__conteudo__imagem__botao {
+    position: absolute;
+    top: calc(40% + 150px + 130px);
+    left: 150px;
+    padding: 10px 20px;
+    background-color: var(--mubiBranco);
+    color: var(--mubiPreto);
+    border: none;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-family: var(--fontePrincipal);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s, margin-right 0.3s;
+}
+
+.principal__conteudo__imagem__botao i {
+    margin-right: 2px;
+    transition: margin-right 0.3s;
+}
+
+.principal__conteudo__imagem__botao:hover {
+    background-color: var(--mubiAzul);
+    color: var(--mubiBranco);
+    font-size: 1rem;
+    font-family: var(--fontePrincipal);
+}
+
+.principal__conteudo__imagem__botao:hover i {
+    margin-right: 8px;
+}

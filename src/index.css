@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --mubiLaranja: #FF4F00;
+  --mubiPreto: #111111;
+  --mubiBranco: #F8F8F8;
+  --mubiRoxo: #5A189A;
+  --mubiAzul: #0015A6;
+
+  --fontePrincipal: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--mubiBranco);
+  overflow-x: hidden;
+}
