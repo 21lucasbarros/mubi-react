@@ -4,7 +4,7 @@
 
 .principal__conteudo__imagem {
     width: 100%;
-    max-height: 700px;
+    max-height: 900px;
     object-fit: cover;
 }
 
@@ -13,32 +13,32 @@
     top: 40%;
     left: 150px;
     width: auto;
-    height: 120px;
+    height: 150px;
     z-index: 10;
 }
 
 .principal__conteudo__imagem__paragrafo {
     position: absolute;
-    top: calc(40% + 150px);
+    top: calc(40% + 200px);
     left: 150px;
     width: auto;
     max-width: 30%;
     color: var(--mubiBranco);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-family: var(--fontePrincipal);
     z-index: 10;
 }
 
 .principal__conteudo__imagem__botao {
     position: absolute;
-    top: calc(40% + 150px + 130px);
+    top: calc(40% + 200px + 200px);
     left: 150px;
     padding: 10px 20px;
     background-color: var(--mubiBranco);
     color: var(--mubiPreto);
     border: none;
     border-radius: 1rem;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-family: var(--fontePrincipal);
     font-weight: bold;
     cursor: pointer;
@@ -57,7 +57,7 @@
 .principal__conteudo__imagem__botao:hover {
     background-color: var(--mubiAzul);
     color: var(--mubiBranco);
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: var(--fontePrincipal);
 }
 
