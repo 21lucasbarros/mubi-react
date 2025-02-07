@@ -1,0 +1,117 @@
+.filmes {
+    padding: 3% 5%;
+}
+
+.filmes__conteudo__titulo {
+    font-size: 1.3rem;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiPreto);
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.filmes__conteudo__filmes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filmes__conteudo__filmes-card {
+    position: relative;
+    display: inline-block;
+    width: 24%;
+    transition: transform 0.3s ease;
+}
+
+.filmes__conteudo__filmes-card:hover {
+    transform: scale(1.05);
+}
+
+.filmes__conteudo__filmes-card img {
+    width: 100%;
+    display: block;
+}
+
+.filmes__conteudo__filmes-card h3,
+.filmes__conteudo__filmes-card p {
+    position: absolute;
+    left: 10px;
+    color: var(--mubiBranco);
+    font-family: var(--fontePrincipal);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.filmes__conteudo__filmes-card h3 {
+    bottom: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.filmes__conteudo__filmes-card p {
+    bottom: 15px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.brasilidade {
+    padding: 3% 5%;
+}
+
+.brasilidade__conteudo__titulo {
+    font-size: 1.3rem;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiPreto);
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.brasilidade__conteudo__filmes {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os filmes se movam para a linha seguinte */
+    gap: 10px;
+    justify-content: center;
+}
+
+.brasilidade__conteudo__filmes-card {
+    position: relative;
+    display: inline-block;
+    width: 24%;
+    /* Mantém o tamanho de cada filme, ajustando o número de itens por linha */
+    transition: transform 0.3s ease;
+}
+
+.brasilidade__conteudo__filmes-card:hover {
+    transform: scale(1.05);
+}
+
+.brasilidade__conteudo__filmes-card img {
+    width: 100%;
+    display: block;
+}
+
+.brasilidade__conteudo__filmes-card h3,
+.brasilidade__conteudo__filmes-card p {
+    position: absolute;
+    left: 10px;
+    color: var(--mubiBranco);
+    font-family: var(--fontePrincipal);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.brasilidade__conteudo__filmes-card h3 {
+    bottom: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.brasilidade__conteudo__filmes-card p {
+    bottom: 15px;
+    font-size: 12px;
+    font-weight: normal;
+}
