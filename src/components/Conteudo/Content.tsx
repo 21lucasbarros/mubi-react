@@ -1,12 +1,26 @@
+import { useState } from "react";
 import "./Content.css";
 
 export default function Content() {
+  const [showMessageFilmes, setShowMessageFilmes] = useState(false);
+  const [showMessageBrasilidade, setShowMessageBrasilidade] = useState(false);
+
   return (
     <>
-      <section className="filmes">
+      <section
+        className="filmes"
+        id="lancamentos"
+        onMouseEnter={() => setShowMessageFilmes(true)}
+        onMouseLeave={() => setShowMessageFilmes(false)}
+      >
         <section className="filmes__conteudo">
-          <h2 className="filmes__conteudo__titulo" id="lancamentos">
+          <h2 className="filmes__conteudo__titulo">
             LANÇAMENTOS
+            {showMessageFilmes && (
+              <span className="filmes__conteudo__titulo__mensagem">
+                VER TUDO <i className="ri-arrow-right-double-line"></i>
+              </span>
+            )}
           </h2>
 
           <section className="filmes__conteudo__filmes">
@@ -53,10 +67,20 @@ export default function Content() {
         </section>
       </section>
 
-      <section className="brasilidade">
+      <section
+        className="brasilidade"
+        id="brasilidade"
+        onMouseEnter={() => setShowMessageBrasilidade(true)}
+        onMouseLeave={() => setShowMessageBrasilidade(false)}
+      >
         <section className="brasilidade__conteudo">
-          <h2 className="brasilidade__conteudo__titulo" id="brasilidade">
+          <h2 className="brasilidade__conteudo__titulo">
             BRASILIDADE
+            {showMessageBrasilidade && (
+              <span className="brasilidade__conteudo__titulo__mensagem">
+                VER TUDO <i className="ri-arrow-right-double-line"></i>
+              </span>
+            )}
           </h2>
 
           <section className="brasilidade__conteudo__filmes">

@@ -30,7 +30,7 @@
 }
 
 .cabecalho__menu__input-text input::placeholder {
-    color: #BFBBA9;
+    color: var(--mubiBeje);
     font-size: 1rem;
 }
 

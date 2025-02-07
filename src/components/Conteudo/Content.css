@@ -11,6 +11,20 @@
     margin-bottom: 0.5rem;
 }
 
+.filmes__conteudo__titulo__mensagem,
+.brasilidade__conteudo__titulo__mensagem {
+    font-size: 0.8rem;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiBeje);
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.filmes__conteudo__titulo__mensagem:hover,
+.brasilidade__conteudo__titulo__mensagem:hover {
+    color: var(--mubiAzul);
+}
+
 .filmes__conteudo__filmes {
     display: flex;
     flex-direction: row;
