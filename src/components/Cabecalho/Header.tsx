@@ -45,7 +45,9 @@ export default function Header() {
               </a>
             </li>
             <li className="cabecalho__menu__link__links">
-              <a href="#">TENDÊNCIAS</a>
+              <a href="#classicos" onClick={scrollToElement}>
+                CLÁSSICOS
+              </a>
             </li>
           </ul>
 

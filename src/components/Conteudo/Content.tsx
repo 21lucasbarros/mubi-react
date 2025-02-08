@@ -4,6 +4,7 @@ import "./Content.css";
 export default function Content() {
   const [showMessageFilmes, setShowMessageFilmes] = useState(false);
   const [showMessageBrasilidade, setShowMessageBrasilidade] = useState(false);
+  const [showMessageClassicos, setShowMessageClassicos] = useState(false);
 
   return (
     <>
@@ -166,6 +167,24 @@ export default function Content() {
               </p>
             </section>
           </section>
+        </section>
+      </section>
+
+      <section
+        className="classicos"
+        id="classicos"
+        onMouseEnter={() => setShowMessageClassicos(true)}
+        onMouseLeave={() => setShowMessageClassicos(false)}
+      >
+        <section className="classicos__conteudo">
+          <h2 className="classicos__conteudo__titulo">
+            CLÁSSICOS{" "}
+            {showMessageClassicos && (
+              <span className="classicos__conteudo__titulo__mensagem">
+                VER TUDO <i className="ri-arrow-right-double-line"></i>
+              </span>
+            )}
+          </h2>
         </section>
       </section>
     </>
