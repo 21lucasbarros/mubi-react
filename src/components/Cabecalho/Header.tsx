@@ -49,6 +49,11 @@ export default function Header() {
                 CLÁSSICOS
               </a>
             </li>
+            <li className="cabecalho__menu__link__links">
+              <a href="#minha-lista" onClick={scrollToElement}>
+                MINHA LISTA
+              </a>
+            </li>
           </ul>
 
           <button className="cabecalho__menu__botao">

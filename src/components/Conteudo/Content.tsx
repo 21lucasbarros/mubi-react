@@ -178,7 +178,7 @@ export default function Content() {
       >
         <section className="classicos__conteudo">
           <h2 className="classicos__conteudo__titulo">
-            CLÁSSICOS{" "}
+            CLÁSSICOS
             {showMessageClassicos && (
               <span className="classicos__conteudo__titulo__mensagem">
                 VER TUDO <i className="ri-arrow-right-double-line"></i>
