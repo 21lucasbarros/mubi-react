@@ -1,69 +1,67 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Content.css";
 
+interface Filme {
+  titulo: string;
+  diretor: string;
+  pais: string;
+  ano: number;
+  imagem: string;
+}
+
+interface FilmesData {
+  lancamentos: Filme[];
+  brasilidade: Filme[];
+  classicos: Filme[];
+}
+
 export default function Content() {
-  const [showMessageFilmes, setShowMessageFilmes] = useState(false);
-  const [showMessageBrasilidade, setShowMessageBrasilidade] = useState(false);
-  const [showMessageClassicos, setShowMessageClassicos] = useState(false);
+  const [filmes, setFilmes] = useState<FilmesData | null>(null);
+  const [showMessage, setShowMessage] = useState({
+    lancamentos: false,
+    brasilidade: false,
+    classicos: false,
+  });
+
+  useEffect(() => {
+    fetch("./filmes.json")
+      .then((response) => response.json())
+      .then((data: FilmesData) => setFilmes(data))
+      .catch((error) => console.error("Erro ao carregar filmes:", error));
+  }, []);
 
   return (
     <>
       <section
         className="filmes"
         id="lancamentos"
-        onMouseEnter={() => setShowMessageFilmes(true)}
-        onMouseLeave={() => setShowMessageFilmes(false)}
+        onMouseEnter={() =>
+          setShowMessage({ ...showMessage, lancamentos: true })
+        }
+        onMouseLeave={() =>
+          setShowMessage({ ...showMessage, lancamentos: false })
+        }
       >
         <section className="filmes__conteudo">
           <h2 className="filmes__conteudo__titulo">
             LANÇAMENTOS
-            {showMessageFilmes && (
+            {showMessage.lancamentos && (
               <span className="filmes__conteudo__titulo__mensagem">
                 VER TUDO <i className="ri-arrow-right-double-line"></i>
               </span>
             )}
           </h2>
-
           <section className="filmes__conteudo__filmes">
-            <section className="filmes__conteudo__filmes-card">
-              <img
-                src="./img/film/la-la-land.png"
-                alt="La La Land"
-                draggable="false"
-              />
-              <h3 className="p1">LA LA LAND</h3>
-              <p className="p2">DAMIEN CHAZELLE ESTADOS UNIDOS 2016</p>
-            </section>
-
-            <section className="filmes__conteudo__filmes-card">
-              <img
-                src="./img/film/lost-in-translation.png"
-                alt="Lost in Translation"
-                draggable="false"
-              />
-              <h3 className="p1">LOST IN TRANSLATION</h3>
-              <p className="p2">SOFIA COPPOLA ESTADOS UNIDOS 2003</p>
-            </section>
-
-            <section className="filmes__conteudo__filmes-card">
-              <img
-                src="./img/film/grown-ups.png"
-                alt="Grown Ups 2"
-                draggable="false"
-              />
-              <h3 className="p1">GROWN UPS 2</h3>
-              <p className="p2">DENNIS DUGAN ESTADOS UNIDOS 2013</p>
-            </section>
-
-            <section className="filmes__conteudo__filmes-card">
-              <img
-                src="./img/film/gone-girl.png"
-                alt="Gone Girl"
-                draggable="false"
-              />
-              <h3 className="p1">GONE GIRL</h3>
-              <p className="p2">DAVID FINCHER ESTADOS UNIDOS 2014</p>
-            </section>
+            {filmes?.lancamentos.map((Filme, index) => (
+              <section key={index} className="filmes__conteudo__filmes-card">
+                <img src={Filme.imagem} alt={Filme.titulo} draggable="false" />
+                <h3>{Filme.titulo.toLocaleUpperCase()}</h3>
+                <p>
+                  <b>{Filme.diretor.toLocaleUpperCase()}</b>{" "}
+                  {Filme.pais.toLocaleUpperCase()} {Filme.ano}
+                </p>
+              </section>
+            ))}
           </section>
         </section>
       </section>
@@ -71,101 +69,36 @@ export default function Content() {
       <section
         className="brasilidade"
         id="brasilidade"
-        onMouseEnter={() => setShowMessageBrasilidade(true)}
-        onMouseLeave={() => setShowMessageBrasilidade(false)}
+        onMouseEnter={() =>
+          setShowMessage({ ...showMessage, brasilidade: true })
+        }
+        onMouseLeave={() =>
+          setShowMessage({ ...showMessage, brasilidade: false })
+        }
       >
         <section className="brasilidade__conteudo">
           <h2 className="brasilidade__conteudo__titulo">
             BRASILIDADE
-            {showMessageBrasilidade && (
+            {showMessage.brasilidade && (
               <span className="brasilidade__conteudo__titulo__mensagem">
                 VER TUDO <i className="ri-arrow-right-double-line"></i>
               </span>
             )}
           </h2>
-
           <section className="brasilidade__conteudo__filmes">
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/cidade-de-deus.png"
-                alt="Cidade de Deus"
-                draggable="false"
-              />
-              <h3 className="p1">CIDADE DE DEUS</h3>
-              <p className="p2">FERNANDO MEIRELLES E KÁTIA LUND BRASIL 2002</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/central-do-brasil.png"
-                alt="Central do Brasil"
-                draggable="false"
-              />
-              <h3 className="p1">CENTRAL DO BRASIL</h3>
-              <p className="p2">WALTER SALLES BRASIL 1998</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/auto-da-compadecida.png"
-                alt="O Auto da Compadecida"
-                draggable="false"
-              />
-              <h3 className="p1">O AUTO DA COMPADECEIDA</h3>
-              <p className="p2">GUEL ARRAES BRASIL 2000</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/tropa-de-elite.png"
-                alt="Tropa de Elite"
-                draggable="false"
-              />
-              <h3 className="p1">TROPA DE ELITE</h3>
-              <p className="p2">JOSE PADILHA BRASIL 2007</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/ainda-estou-aqui.png"
-                alt="Ainda Estou Aqui"
-                draggable="false"
-              />
-              <h3 className="p1">AINDA ESTOU AQUI</h3>
-              <p className="p2">WALTER SALLES BRASIL 2024</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/que-horas-ela-volta.png"
-                alt="Que Horas Ela Volta?"
-                draggable="false"
-              />
-              <h3 className="p1">QUE HORAS ELA VOLTA?</h3>
-              <p className="p2">ANNA MUYLAERT BRASIL 2015</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/a-vida-invisivel.png"
-                alt="A Vida Invisível"
-                draggable="false"
-              />
-              <h3 className="p1">A VIDA INVISÍVEL</h3>
-              <p className="p2">KLEBER MENDONÇA FILHO BRASIL 2019</p>
-            </section>
-
-            <section className="brasilidade__conteudo__filmes-card">
-              <img
-                src="./img/film/bacurau.png"
-                alt="Bacurau"
-                draggable="false"
-              />
-              <h3 className="p1">BACURAU</h3>
-              <p className="p2">
-                KLEBER MENDONÇA FILHO E JULIANO DORNELLES BRASIL 2019
-              </p>
-            </section>
+            {filmes?.brasilidade.map((Filme, index) => (
+              <section
+                key={index}
+                className="brasilidade__conteudo__filmes-card"
+              >
+                <img src={Filme.imagem} alt={Filme.titulo} draggable="false" />
+                <h3>{Filme.titulo.toLocaleUpperCase()}</h3>
+                <p>
+                  <b>{Filme.diretor.toLocaleUpperCase()}</b>{" "}
+                  {Filme.pais.toLocaleUpperCase()} {Filme.ano}
+                </p>
+              </section>
+            ))}
           </section>
         </section>
       </section>
@@ -173,18 +106,32 @@ export default function Content() {
       <section
         className="classicos"
         id="classicos"
-        onMouseEnter={() => setShowMessageClassicos(true)}
-        onMouseLeave={() => setShowMessageClassicos(false)}
+        onMouseEnter={() => setShowMessage({ ...showMessage, classicos: true })}
+        onMouseLeave={() =>
+          setShowMessage({ ...showMessage, classicos: false })
+        }
       >
         <section className="classicos__conteudo">
           <h2 className="classicos__conteudo__titulo">
             CLÁSSICOS
-            {showMessageClassicos && (
+            {showMessage.classicos && (
               <span className="classicos__conteudo__titulo__mensagem">
                 VER TUDO <i className="ri-arrow-right-double-line"></i>
               </span>
             )}
           </h2>
+          <section className="classicos__conteudo__filmes">
+            {filmes?.classicos.map((Filme, index) => (
+              <section key={index} className="classicos__conteudo__filmes-card">
+                <img src={Filme.imagem} alt={Filme.titulo} draggable="false" />
+                <h3>{Filme.titulo.toLocaleUpperCase()}</h3>
+                <p>
+                  <b>{Filme.diretor.toLocaleUpperCase()}</b>{" "}
+                  {Filme.pais.toLocaleUpperCase()} {Filme.ano}
+                </p>
+              </section>
+            ))}
+          </section>
         </section>
       </section>
     </>

@@ -1,0 +1,120 @@
+{
+  "lancamentos": [
+    {
+      "titulo": "La La Land",
+      "diretor": "Damien Chazelle",
+      "pais": "Estados Unidos",
+      "ano": 2016,
+      "imagem": "./img/film/la-la-land.png"
+    },
+    {
+      "titulo": "Lost in Translation",
+      "diretor": "Sofia Coppola",
+      "pais": "Estados Unidos",
+      "ano": 2003,
+      "imagem": "./img/film/lost-in-translation.png"
+    },
+    {
+      "titulo": "Grown Ups 2",
+      "diretor": "Dennis Dugan",
+      "pais": "Estados Unidos",
+      "ano": 2013,
+      "imagem": "./img/film/grown-ups.png"
+    },
+    {
+      "titulo": "Gone Girl",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 2014,
+      "imagem": "./img/film/gone-girl.png"
+    }
+  ],
+  "brasilidade": [
+    {
+      "titulo": "Cidade de Deus",
+      "diretor": "Fernando Meirelles e Kátia Lund",
+      "pais": "Brasil",
+      "ano": 2002,
+      "imagem": "./img/film/cidade-de-deus.png"
+    },
+    {
+      "titulo": "Central do Brasil",
+      "diretor": "Walter Salles",
+      "pais": "Brasil",
+      "ano": 1998,
+      "imagem": "./img/film/central-do-brasil.png"
+    },
+    {
+      "titulo": "O Auto da Compadecida",
+      "diretor": "Guel Arraes",
+      "pais": "Brasil",
+      "ano": 2000,
+      "imagem": "./img/film/auto-da-compadecida.png"
+    },
+    {
+      "titulo": "Tropa de Elite",
+      "diretor": "José Padilha",
+      "pais": "Brasil",
+      "ano": 2007,
+      "imagem": "./img/film/tropa-de-elite.png"
+    },
+    {
+      "titulo": "Ainda Estou Aqui",
+      "diretor": "Walter Salles",
+      "pais": "Brasil",
+      "ano": 2024,
+      "imagem": "./img/film/ainda-estou-aqui.png"
+    },
+    {
+      "titulo": "Que Horas Ela Volta?",
+      "diretor": "Anna Muylaert",
+      "pais": "Brasil",
+      "ano": 2015,
+      "imagem": "./img/film/que-horas-ela-volta.png"
+    },
+    {
+      "titulo": "Bingo: O Rei das Manhãs",
+      "diretor": "Daniel Rezende",
+      "pais": "Brasil",
+      "ano": 2017,
+      "imagem": "./img/film/bingo-o-rei-das-manhas.png"
+    },
+    {
+      "titulo": "Bacurau",
+      "diretor": "Kleber Mendonça Filho e Juliano Dornelles",
+      "pais": "Brasil",
+      "ano": 2019,
+      "imagem": "./img/film/bacurau.png"
+    }
+  ],
+  "classicos": [
+    {
+      "titulo": "The Godfather",
+      "diretor": "Francis Ford Coppola",
+      "pais": "Estados Unidos",
+      "ano": 1972,
+      "imagem": "./img/film/o-poderoso-chefao.png"
+    },
+    {
+      "titulo": "Psycho",
+      "diretor": "Alfred Hitchcock",
+      "pais": "Estados Unidos",
+      "ano": 1960,
+      "imagem": "./img/film/psicose.png"
+    },
+    {
+      "titulo": "Citizen Kane",
+      "diretor": "Orson Welles",
+      "pais": "Estados Unidos",
+      "ano": 1941,
+      "imagem": "./img/film/cidadao-kane.png"
+    },
+    {
+      "titulo": "Jurassic Park",
+      "diretor": "Steven Spielberg",
+      "pais": "Estados Unidos",
+      "ano": 1993,
+      "imagem": "./img/film/jurassic-park.png"
+    }
+  ]
+}

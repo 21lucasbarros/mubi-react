@@ -88,7 +88,6 @@
 .brasilidade__conteudo__filmes {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que os filmes se movam para a linha seguinte */
     gap: 10px;
     justify-content: center;
 }
@@ -97,7 +96,6 @@
     position: relative;
     display: inline-block;
     width: 24%;
-    /* Mantém o tamanho de cada filme, ajustando o número de itens por linha */
     transition: transform 0.3s ease;
 }
 
@@ -143,4 +141,49 @@
     text-align: left;
     margin-left: 20px;
     margin-bottom: 0.5rem;
+}
+
+.classicos__conteudo__filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.classicos__conteudo__filmes-card {
+    position: relative;
+    display: inline-block;
+    width: 24%;
+    transition: transform 0.3s ease;
+}
+
+.classicos__conteudo__filmes-card:hover {
+    transform: scale(1.05);
+}
+
+.classicos__conteudo__filmes-card img {
+    width: 100%;
+    display: block;
+}
+
+.classicos__conteudo__filmes-card h3,
+.classicos__conteudo__filmes-card p {
+    position: absolute;
+    left: 10px;
+    color: var(--mubiBranco);
+    font-family: var(--fontePrincipal);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.classicos__conteudo__filmes-card h3 {
+    bottom: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.classicos__conteudo__filmes-card p {
+    bottom: 15px;
+    font-size: 12px;
+    font-weight: normal;
 }
