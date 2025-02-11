@@ -43,6 +43,17 @@ export default function Header() {
     }
   }, [busca, filmes]);
 
+  function scrollToElement(
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) {
+    event.preventDefault();
+    const index = event.currentTarget.href.indexOf("#");
+    const id = event.currentTarget.href.slice(1 + index);
+
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <header className="cabecalho">
@@ -88,15 +99,30 @@ export default function Header() {
 
           <ul className="cabecalho__menu__link">
             <li className="cabecalho__menu__link__links">
-              <a href="#lancamentos">LANÇAMENTOS</a>
+              <a href="#lancamentos" onClick={scrollToElement}>
+                LANÇAMENTOS
+              </a>
             </li>
             <li className="cabecalho__menu__link__links">
-              <a href="#brasilidade">BRASILIDADE</a>
+              <a href="#brasilidade" onClick={scrollToElement}>
+                BRASILIDADE
+              </a>
             </li>
             <li className="cabecalho__menu__link__links">
-              <a href="#classicos">CLÁSSICOS</a>
+              <a href="#classicos" onClick={scrollToElement}>
+                CLÁSSICOS
+              </a>
+            </li>
+            <li className="cabecalho__menu__link__links">
+              <a href="#minha-lista" onClick={scrollToElement}>
+                MINHA LISTA
+              </a>
             </li>
           </ul>
+
+          <button className="cabecalho__menu__botao">
+            <i className="ri-menu-line"></i>
+          </button>
         </section>
       </header>
     </>
