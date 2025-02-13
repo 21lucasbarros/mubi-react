@@ -105,3 +105,14 @@
     background-color: var(--mubiBranco);
     color: var(--mubiPreto);
 }
+
+.principal__conteudo__imagem__botao__fav.favorito {
+    background-color: transparent;
+    color: var(--mubiBranco);
+    border-color: var(--mubiBranco);
+}
+
+.principal__conteudo__imagem__botao__fav.favorito:hover {
+    background-color: var(--mubiBranco);
+    color: var(--mubiPreto);
+}

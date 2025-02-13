@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./Main.css";
 
 export default function Main() {
+  const [isFavorito, setIsFavorito] = useState(false);
+
+  const toggleFavorito = () => {
+    setIsFavorito((prev) => !prev);
+  };
+
   return (
     <>
       <main className="principal">
@@ -37,8 +44,13 @@ export default function Main() {
                 <i className="ri-play-fill"></i>
                 ASSISTIR
               </button>
-              <button className="principal__conteudo__imagem__botao__fav">
-                <i className="ri-add-line"></i>
+              <button
+                className={`principal__conteudo__imagem__botao__fav ${
+                  isFavorito ? "favorito" : ""
+                }`}
+                onClick={toggleFavorito}
+              >
+                <i className={isFavorito ? "ri-check-line" : "ri-add-line"}></i>
               </button>
             </section>
           </section>
