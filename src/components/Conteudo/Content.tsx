@@ -21,6 +21,7 @@ export default function Content() {
     lancamentos: false,
     brasilidade: false,
     classicos: false,
+    minha_lista: false,
   });
 
   useEffect(() => {
@@ -132,6 +133,28 @@ export default function Content() {
               </section>
             ))}
           </section>
+        </section>
+      </section>
+
+      <section
+        className="minha_lista"
+        id="minha_lista"
+        onMouseEnter={() =>
+          setShowMessage({ ...showMessage, minha_lista: true })
+        }
+        onMouseLeave={() =>
+          setShowMessage({ ...showMessage, minha_lista: false })
+        }
+      >
+        <section className="minha_lista__conteudo">
+          <h2 className="minha_lista__conteudo__titulo">
+            MINHA LISTA
+            {showMessage.minha_lista && (
+              <span className="classicos__conteudo__titulo__mensagem">
+                VER TUDO <i className="ri-arrow-right-double-line"></i>
+              </span>
+            )}
+          </h2>
         </section>
       </section>
     </>

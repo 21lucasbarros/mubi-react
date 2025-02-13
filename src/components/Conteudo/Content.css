@@ -187,3 +187,16 @@
     font-size: 12px;
     font-weight: normal;
 }
+
+.minha_lista {
+    padding: 3% 5%;
+}
+
+.minha_lista__conteudo__titulo {
+    font-size: 1.3rem;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiPreto);
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0.5rem;
+}
