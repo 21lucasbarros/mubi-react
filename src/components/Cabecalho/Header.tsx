@@ -114,7 +114,7 @@ export default function Header() {
               </a>
             </li>
             <li className="cabecalho__menu__link__links">
-              <a href="#minha-lista" onClick={scrollToElement}>
+              <a href="#minha_lista" onClick={scrollToElement}>
                 MINHA LISTA
               </a>
             </li>

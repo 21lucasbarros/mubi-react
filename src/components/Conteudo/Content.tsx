@@ -37,10 +37,10 @@ export default function Content() {
         className="filmes"
         id="lancamentos"
         onMouseEnter={() =>
-          setShowMessage({ ...showMessage, lancamentos: true })
+          setShowMessage((prev) => ({ ...prev, lancamentos: true }))
         }
         onMouseLeave={() =>
-          setShowMessage({ ...showMessage, lancamentos: false })
+          setShowMessage((prev) => ({ ...prev, lancamentos: false }))
         }
       >
         <section className="filmes__conteudo">
@@ -71,10 +71,10 @@ export default function Content() {
         className="brasilidade"
         id="brasilidade"
         onMouseEnter={() =>
-          setShowMessage({ ...showMessage, brasilidade: true })
+          setShowMessage((prev) => ({ ...prev, brasilidade: true }))
         }
         onMouseLeave={() =>
-          setShowMessage({ ...showMessage, brasilidade: false })
+          setShowMessage((prev) => ({ ...prev, brasilidade: false }))
         }
       >
         <section className="brasilidade__conteudo">
@@ -107,9 +107,11 @@ export default function Content() {
       <section
         className="classicos"
         id="classicos"
-        onMouseEnter={() => setShowMessage({ ...showMessage, classicos: true })}
+        onMouseEnter={() =>
+          setShowMessage((prev) => ({ ...prev, classicos: true }))
+        }
         onMouseLeave={() =>
-          setShowMessage({ ...showMessage, classicos: false })
+          setShowMessage((prev) => ({ ...prev, classicos: false }))
         }
       >
         <section className="classicos__conteudo">
@@ -136,14 +138,26 @@ export default function Content() {
         </section>
       </section>
 
+      <section className="colecao_fincher">
+        <section className="colecao_fincher__conteudo">
+          <img
+            src="./img/film/david-fincher.png"
+            alt="David Fincher"
+            className="colecao_fincher__conteudo__imagem"
+          />
+          <p className="colecao__fincher__conteudo__paragrafo">COLEÇÃO</p>
+          <h2 className="colecao__fincher__conteudo__titulo">DAVID FINCHER</h2>
+        </section>
+      </section>
+
       <section
         className="minha_lista"
         id="minha_lista"
         onMouseEnter={() =>
-          setShowMessage({ ...showMessage, minha_lista: true })
+          setShowMessage((prev) => ({ ...prev, minha_lista: true }))
         }
         onMouseLeave={() =>
-          setShowMessage({ ...showMessage, minha_lista: false })
+          setShowMessage((prev) => ({ ...prev, minha_lista: false }))
         }
       >
         <section className="minha_lista__conteudo">

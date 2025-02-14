@@ -188,6 +188,12 @@
     font-weight: normal;
 }
 
+.colecao_fincher__conteudo__imagem {
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+}
+
 .minha_lista {
     padding: 3% 5%;
 }
