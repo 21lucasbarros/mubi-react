@@ -116,5 +116,56 @@
       "ano": 1993,
       "imagem": "./img/film/jurassic-park.png"
     }
+  ],
+  "colecao_fincher": [
+    {
+      "titulo": "Se7en",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 1995,
+      "imagem": "./img/film/se7en.png"
+    },
+    {
+      "titulo": "Fight Club",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 1999,
+      "imagem": "./img/film/fight-club.png"
+    },
+    {
+      "titulo": "Zodiac",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 2007,
+      "imagem": "./img/film/zodiac.png"
+    },
+    {
+      "titulo": "The Social Network",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 2010,
+      "imagem": "./img/film/social-network.png"
+    },
+    {
+      "titulo": "Gone Girl",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 2014,
+      "imagem": "./img/film/gone-girl.png"
+    },
+    {
+      "titulo": "Mank",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 2020,
+      "imagem": "./img/film/mank.png"
+    },
+    {
+      "titulo": "The Killer",
+      "diretor": "David Fincher",
+      "pais": "Estados Unidos",
+      "ano": 2023,
+      "imagem": "./img/film/the-killer.png"
+    }
   ]
 }
