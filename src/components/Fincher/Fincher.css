@@ -1,0 +1,140 @@
+.colecao_fincher {
+    position: relative;
+}
+
+.colecao_fincher__conteudo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.colecao_fincher__conteudo__imagem {
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+    display: block;
+}
+
+.colecao_fincher__conteudo__subtitulo,
+.colecao_fincher__conteudo__titulo,
+.colecao_fincher__conteudo__paragrafo {
+    position: absolute;
+    color: white;
+    padding-left: 120px;
+}
+
+.colecao_fincher__conteudo__subtitulo {
+    top: 10%;
+    font-size: 1rem;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiBeje);
+}
+
+.colecao_fincher__conteudo__titulo {
+    top: 15%;
+    font-size: 2.5rem;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiBranco);
+}
+
+.colecao_fincher__conteudo__paragrafo {
+    top: 25%;
+    font-size: 1.2rem;
+    width: 480px;
+    font-family: var(--fontePrincipal);
+    color: var(--mubiBranco);
+}
+
+.carousel-container {
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0 5%;
+}
+
+.colecao_fincher__conteudo__filmes {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.colecao_fincher__conteudo__filmes::-webkit-scrollbar {
+    display: none;
+}
+
+.colecao_fincher__conteudo__filmes-card {
+    position: relative;
+    flex: 0 0 24%;
+    transition: transform 0.3s ease;
+}
+
+.colecao_fincher__conteudo__filmes-card:hover {
+    transform: scale(1.05);
+}
+
+.colecao_fincher__conteudo__filmes-card img {
+    width: 100%;
+    display: block;
+}
+
+.colecao_fincher__conteudo__filmes-card h3,
+.colecao_fincher__conteudo__filmes-card p {
+    position: absolute;
+    left: 10px;
+    color: var(--mubiBranco);
+    font-family: var(--fontePrincipal);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.colecao_fincher__conteudo__filmes-card h3 {
+    bottom: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.colecao_fincher__conteudo__filmes-card p {
+    bottom: 15px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-control.visible {
+    opacity: 1;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.left {
+    left: 20px;
+}
+
+.carousel-control.right {
+    right: 20px;
+}

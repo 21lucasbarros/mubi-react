@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Content.css";
+import Fincher from "../Fincher/Fincher";
 
 interface Filme {
   titulo: string;
@@ -139,40 +140,7 @@ export default function Content() {
         </section>
       </section>
 
-      <section className="colecao_fincher">
-        <section className="colecao_fincher__conteudo">
-          <img
-            src="./img/film/david-fincher.png"
-            alt="David Fincher"
-            className="colecao_fincher__conteudo__imagem"
-          />
-          <p className="colecao_fincher__conteudo__subtitulo">COLEÇÃO</p>
-          <h2 className="colecao_fincher__conteudo__titulo">DAVID FINCHER</h2>
-          <p className="colecao_fincher__conteudo__paragrafo">
-            Prepare-se para mergulhar na mente de um dos maiores mestres do
-            cinema moderno. A coleção de David Fincher traz histórias sombrias,
-            tramas inteligentes e uma estética impecável que desafia a percepção
-            do espectador. De 'Clube da Luta' a 'Zodíaco', cada filme é um
-            enigma visual e psicológico que prende do início ao fim. Você está
-            pronto para a imersão?
-          </p>
-          <section className="colecao_fincher__conteudo__filmes">
-            {filmes?.colecao_fincher.map((Filme, index) => (
-              <section
-                key={index}
-                className="colecao_fincher__conteudo__filmes-card"
-              >
-                <img src={Filme.imagem} alt={Filme.titulo} draggable="false" />
-                <h3>{Filme.titulo.toLocaleUpperCase()}</h3>
-                <p>
-                  <b>{Filme.diretor.toLocaleUpperCase()}</b>{" "}
-                  {Filme.pais.toLocaleUpperCase()} {Filme.ano}
-                </p>
-              </section>
-            ))}
-          </section>
-        </section>
-      </section>
+      {filmes && <Fincher filmes={filmes.colecao_fincher} />}
 
       <section
         className="minha_lista"
