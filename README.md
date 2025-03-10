@@ -1,50 +1,109 @@
-# React + TypeScript + Vite
+# Mubi React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao **Mubi React**, uma página inspirada no [MUBI](https://mubi.com/), desenvolvida como um projeto pessoal para explorar e aprimorar habilidades em React, TypeScript e Vite. Este projeto ainda está em desenvolvimento e há muitas melhorias e funcionalidades a serem adicionadas.
 
-Currently, two official plugins are available:
+## Estrutura do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A estrutura do projeto é organizada da seguinte forma:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+lucasweacked-mubi-react/
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   ├── filmes.json
+│   └── img/
+│       └── film/
+└── src/
+    ├── index.css
+    ├── main.tsx
+    ├── vite-env.d.ts
+    ├── assets/
+    └── components/
+        ├── Cabecalho/
+        │   ├── Header.css
+        │   └── Header.tsx
+        ├── Conteudo/
+        │   ├── Content.css
+        │   └── Content.tsx
+        ├── Fincher/
+        │   ├── Fincher.css
+        │   └── Fincher.tsx
+        ├── Principal/
+        │   ├── Main.css
+        │   └── Main.tsx
+        └── Rodape/
+            ├── Footer.css
+            └── Footer.tsx
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Funcionalidades Atuais
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+O projeto atualmente possui as seguintes sessões:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Lançamentos**: Filmes que acabaram de entrar no catálogo.
+- **Brasilidade**: Grandes filmes brasileiros como:
+  - _Ainda Estou Aqui_
+  - _Tropa de Elite_
+  - _Cidade de Deus_
+  - _Central do Brasil_
+- **Clássicos do Cinema**: Filmes icônicos como:
+  - _Poderoso Chefão_
+  - _Psicose_
+  - _Cidadão Kane_
+  - _Jurassic Park_
+- **David Fincher**: Principais filmes do renomado cineasta.
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Adiciona tipagem estática ao JavaScript.
+- **Vite**: Ferramenta de build rápida para desenvolvimento moderno.
+- **CSS**: Para estilização dos componentes.
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/lucasweacked/mubi-react.git
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. Abra o projeto no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+## Próximos Passos
+
+O projeto ainda está em desenvolvimento e há muitas coisas para melhorar, adicionar e aperfeiçoar. Algumas das próximas etapas incluem:
+
+- Adicionar mais filmes e categorias.
+- Melhorar a responsividade da página.
+- Implementar funcionalidades de busca e filtragem.
+- Adicionar autenticação de usuário.
+- Integrar uma API de filmes para dados dinâmicos.
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você quiser contribuir para o projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+---
+
+🎯 Feito por **Lucas Barros Simon**
