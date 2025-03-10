@@ -1,4 +1,4 @@
-# Mubi React
+# 🎥 Mubi React
 
 Bem-vindo ao **Mubi React**, uma página inspirada no [MUBI](https://mubi.com/), desenvolvida como um projeto pessoal para explorar e aprimorar habilidades em React, TypeScript e Vite. Este projeto ainda está em desenvolvimento e há muitas melhorias e funcionalidades a serem adicionadas.
 
