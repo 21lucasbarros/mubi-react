@@ -1,88 +1,88 @@
 .cabecalho {
-    padding: 0.5% 16%;
+  padding: 0.5% 16%;
 }
 
 .cabecalho__menu {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .cabecalho__menu__imagem {
-    width: 100px;
-    margin-right: 20px;
+  width: 100px;
+  margin-right: 20px;
 }
 
 .cabecalho__menu__input-text {
-    border: none;
-    font-size: 1.2rem;
+  border: none;
+  font-size: 1.2rem;
 }
 
 .cabecalho__menu__input-text input {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: var(--mubiPreto);
-    font-family: var(--fontePrincipal);
-    font-size: 1rem;
-    padding-left: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--mubiPreto);
+  font-family: var(--fontePrincipal);
+  font-size: 1rem;
+  padding-left: 5px;
 }
 
 .cabecalho__menu__input-text input::placeholder {
-    color: var(--mubiBeje);
-    font-size: 1rem;
+  color: var(--mubiBeje);
+  font-size: 1rem;
 }
 
 .cabecalho__menu__link {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-left: auto;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
 }
 
 .cabecalho__menu__link__links a {
-    font-size: 1rem;
-    font-family: var(--fontePrincipal);
-    font-weight: 600;
-    color: var(--mubiPreto);
-    text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--fontePrincipal);
+  font-weight: 600;
+  color: var(--mubiPreto);
+  text-decoration: none;
 }
 
 .cabecalho__menu__botao {
-    border: none;
-    padding-left: 12px;
-    font-size: 1.2rem;
+  border: none;
+  padding-left: 12px;
+  font-size: 1.2rem;
 }
 
 .resultados {
-    position: absolute;
-    background-color: var(--mubiBranco);
-    border: 1px solid var(--mubiBeje);
-    width: 25%;
-    max-height: 200px;
-    overflow-y: auto;
-    list-style: none;
-    padding: 0;
-    border-radius: 10px;
-    margin-top: 5px;
-    z-index: 10;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  background-color: var(--mubiBranco);
+  border: 1px solid var(--mubiBeje);
+  width: 25%;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  border-radius: 10px;
+  margin-top: 5px;
+  z-index: 10;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .resultado-item {
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .resultado-item span {
-    color: var(--mubiPreto);
-    font-family: var(--fontePrincipal);
-    font-size: 1rem;
+  color: var(--mubiPreto);
+  font-family: var(--fontePrincipal);
+  font-size: 1rem;
 }
 
 .resultado-item:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
