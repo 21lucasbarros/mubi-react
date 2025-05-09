@@ -1,118 +1,118 @@
 .principal__conteudo {
-    position: relative;
+  position: relative;
 }
 
 .principal__conteudo__imagem {
-    width: 100%;
-    max-height: 900px;
-    object-fit: cover;
+  width: 100%;
+  max-height: 900px;
+  object-fit: cover;
 }
 
 .principal__conteudo__imagem__logo {
-    position: absolute;
-    top: 40%;
-    left: 150px;
-    width: auto;
-    height: 150px;
-    z-index: 10;
+  position: absolute;
+  top: 40%;
+  left: 150px;
+  width: auto;
+  height: 150px;
+  z-index: 10;
 }
 
 .principal__conteudo__imagem__paragrafo {
-    position: absolute;
-    top: calc(40% + 200px);
-    left: 150px;
-    width: auto;
-    max-width: 30%;
-    color: var(--mubiBranco);
-    font-size: 1.2rem;
-    font-family: var(--fontePrincipal);
-    z-index: 10;
+  position: absolute;
+  top: calc(40% + 200px);
+  left: 150px;
+  width: auto;
+  max-width: 30%;
+  color: var(--mubiBranco);
+  font-size: 1.2rem;
+  font-family: var(--fontePrincipal);
+  z-index: 10;
 }
 
 .principal__conteudo__imagem__botao {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: calc(40% + 200px + 200px);
-    left: 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: calc(40% + 200px + 200px);
+  left: 150px;
 }
 
 .principal__conteudo__imagem__botao__play {
-    padding: 10px 20px;
-    background-color: var(--mubiBranco);
-    color: var(--mubiPreto);
-    border: none;
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    font-family: var(--fontePrincipal);
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+  padding: 10px 20px;
+  background-color: var(--mubiBranco);
+  color: var(--mubiPreto);
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-family: var(--fontePrincipal);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, font-size 0.3s;
 }
 
 .principal__conteudo__imagem__botao__fav {
-    padding: 10px 20px;
-    background-color: transparent;
-    color: var(--mubiBranco);
-    border: 1px solid var(--mubiBranco);
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    font-family: var(--fontePrincipal);
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--mubiBranco);
+  border: 1px solid var(--mubiBranco);
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-family: var(--fontePrincipal);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, font-size 0.3s;
 }
 
 .principal__conteudo__imagem__botao__play i {
-    margin-right: 5px;
-    transition: margin-right 0.3s;
+  margin-right: 5px;
+  transition: margin-right 0.3s;
 }
 
 .principal__conteudo__imagem__botao__play:hover {
-    background-color: var(--mubiAzul);
-    color: var(--mubiBranco);
-    font-size: 1.4rem;
+  background-color: var(--mubiAzul);
+  color: var(--mubiBranco);
+  font-size: 1.4rem;
 }
 
 .principal__conteudo__imagem__botao__play:hover i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .principal__conteudo__imagem__botao__fav {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    border: 1px solid var(--mubiBranco);
-    background-color: transparent;
-    color: var(--mubiBranco);
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    border-radius: 50%;
-    padding: 5px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid var(--mubiBranco);
+  background-color: transparent;
+  color: var(--mubiBranco);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .principal__conteudo__imagem__botao__fav:hover {
-    background-color: var(--mubiBranco);
-    color: var(--mubiPreto);
+  background-color: var(--mubiBranco);
+  color: var(--mubiPreto);
 }
 
 .principal__conteudo__imagem__botao__fav.favorito {
-    background-color: transparent;
-    color: var(--mubiBranco);
-    border-color: var(--mubiBranco);
+  background-color: transparent;
+  color: var(--mubiBranco);
+  border-color: var(--mubiBranco);
 }
 
 .principal__conteudo__imagem__botao__fav.favorito:hover {
-    background-color: var(--mubiBranco);
-    color: var(--mubiPreto);
+  background-color: var(--mubiBranco);
+  color: var(--mubiPreto);
 }
